@@ -5,6 +5,7 @@ function Validar(){
 	var id;
 	this.ValidInsert = ValidInsert;
 	this.ValidUpdate = ValidUpdate;
+	this.ValidSelect = ValidSelect;
 
 		function ValidInsert(_nome,_idade,_sexo){
 			this.nome = _nome.value;
@@ -44,6 +45,16 @@ function Validar(){
 				return false;
 			};
 
+		};
+
+		function ValidSelect(n,i){
+			this.nome = n.value;
+			this.id = i.value;
+
+			if(this.nome == "" || this.id == ""){
+				n.focus();
+				return false;
+			};
 		};
 
 		

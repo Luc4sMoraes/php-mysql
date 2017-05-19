@@ -19,6 +19,9 @@
   <button type="button" class="btn btn-default"><a href="delete.php">Delete</a></button>
 </div>
 </div>
+<script type="text/javascript">
+	var Test = new Validar();
+</script>
 <?php
 // Função Responsavel por chamar a pagina com o nome da classe.
 function __autoload($class_name){
@@ -70,10 +73,10 @@ foreach ($resultado as $listar){
 	<span class="input-group-addon" id="basic-addon1">Nome</span>
 	<input type="text" name="nome" placeholder="Nome" class="form-control" aria-describedby="basic-addon1">
 	<span class="input-group-addon" id="basic-addon1">ID</span>
-	<input type="text" name="id" placeholder="Id" class="form-control" aria-describedby="basic-addon1">	
+	<input type="number" name="id" placeholder="Id" class="form-control" aria-describedby="basic-addon1">	
 	</div>
 
-	<button type="submit" class="btn btn-default navbar-btn" onclick="return Validar_Select()">Enviar</a></button>
+	<button type="submit" class="btn btn-default navbar-btn" onclick="return Test.ValidSelect(nome,id)">Enviar</a></button>
 	
 	<button type="buttom" class="btn btn-default navbar-btn" name="tudo" onclick="return Exibir()">Exibir Tudo</button>
 
